@@ -1,0 +1,66 @@
+<hibernate-configuration>
+
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+
+        <property name="connection.url">jdbc:h2:~/test</property>
+
+        <property name="connection.username">sa</property>
+        <property name="connection.password"/>
+        <!-- <property name="hibernate.default_schema">PUBLIC</property> -->
+         <!-- JDBC connection pool (use the built-in) -->
+        <!-- <property name="connection.pool_size">1</property> -->
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+        <!-- Disable the second-level cache  -->
+        <!-- <property name="cache.provider_class">org.hibernate.cache.internal.NoCacheProvider</property>-->
+        <!-- Echo all executed SQL to stdout -->
+        <property name="show_sql">true</property>
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hbm2ddl.auto">update</property>
+
+       <!--  myhibernate_onetoone.sharedprimarykey  -->
+        <!--   <mapping class="com.myhibernate_onetoone.sharedprimarykey.entitys.Address" />
+          <mapping class="com.myhibernate_onetoone.sharedprimarykey.entitys.User" /> -->
+
+          <!--  myhibernate_onetoone.foreigngenerator  -->
+        <!--  <mapping class="com.myhibernate_onetoone.foreigngenerator.entitys.Address" />
+          <mapping class="com.myhibernate_onetoone.foreigngenerator.entitys.User" />-->
+
+          <!--  myhibernate_onetoone.foregnkey  -->
+       <!-- <mapping class="com.myhibernate_onetoone.foregnkey.entitys.Address" />
+        <mapping class="com.myhibernate_onetoone.foregnkey.entitys.User" /> -->
+
+        <!--  myhibernate_onetoone.foregnkey  -->
+       <!-- <mapping class="com.myhibernate_onetoone.jointable.entitys.Item" />
+        <mapping class="com.myhibernate_onetoone.jointable.entitys.Shipment" />
+        <mapping class="com.myhibernate_onetoone.jointable.entitys.ShipmentState" /> -->
+
+        <!-- <mapping class="com.myhibernate_onetomany.variant01.entitys.Student" />
+        <mapping class="com.myhibernate_onetomany.variant01.entitys.MarksDetails" />   -->
+
+
+        <!--  OneToManyfk-->
+        <!--   <mapping class="com.myhibernate.oneToMany.foreignKeyAsso.AccountEntity" /> -->
+        <!--   <mapping class="com.myhibernate.oneToMany.foreignKeyAsso.EmployeeEntity" /> -->
+
+        <!--  OneToManyjt-->
+        <!--    <mapping class="com.oneToMany.joinTable.AccountEntity" />
+           <mapping class="com.oneToMany.joinTable.EmployeeEntity" />
+
+
+           <mapping class="com.oneToMany.test.Stock" />
+           <mapping class="com.oneToMany.test.StockDailyRecord" /> -->
+
+
+           <mapping class="com.ManyToMany.entitys.Category" />
+           <mapping class="com.ManyToMany.entitys.Stock" />
+
+        <mapping class="com.ManyToMany.entitys.Person" />
+        <mapping class="com.ManyToMany.entitys.Homeaddress" />
+
+       </session-factory>
+
+
+   </hibernate-configuration>
